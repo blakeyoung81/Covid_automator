@@ -6,9 +6,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-import selenium
-import pickle
-import csv
+import tkinter as tk
+from tkinter import simpledialog
 
 def wait_for_element(string, delay):
     wait = WebDriverWait(chrome, delay)
@@ -77,8 +76,14 @@ def login_to_color(username, password,d_text,c_text):
 
 chrome = webdriver.Chrome(ChromeDriverManager().install())
 #change these values
-d_text = '1234567890'
-c_text = '12345'
+ROOT = tk.Tk()
+ROOT.withdraw()
+# the input dialog
+d_text = simpledialog.askstring(title="D",
+                                prompt="What's the D-value?(not including D):")
+
+c_text = simpledialog.askstring(title="D",
+                                prompt="What's the C-value? (not including C):")
 #change these values
 login_to_color("username", "password",d_text,c_text)
 # !!!! This program only works if you have an account and have uploaded the information of your account

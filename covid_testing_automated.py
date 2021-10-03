@@ -75,15 +75,14 @@ def login_to_color(username, password,d_text,c_text):
     wait_and_click(cont6)
     wait_and_click(cont7)
 
-if __name__ == "__main__":
-    chrome = webdriver.Chrome(ChromeDriverManager().install())
-    #change these values
-    d_text = '1234567890'
-    c_text = '12345'
-    #change these values
-    login_to_color("username", "password",d_text,c_text)
-    # !!!! This program only works if you have an account and have uploaded the information of your account
-    # You could edit that into the code though if you'd like
+chrome = webdriver.Chrome(ChromeDriverManager().install())
+#change these values
+d_text = '1234567890'
+c_text = '12345'
+#change these values
+login_to_color("username", "password",d_text,c_text)
+# !!!! This program only works if you have an account and have uploaded the information of your account
+# You could edit that into the code though if you'd like
 
 
 
